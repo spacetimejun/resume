@@ -1,0 +1,28 @@
+<table ng-repeat='item in list' border="0" cellspacing="0" cellpadding="0" class="fourTable">
+	
+	<tr >
+		<td rowspan="4" align="center">{{item.num}}</td>
+		<td align="center">项目名称：</td>
+		<td class="tdContent">{{item.title}}</td>
+	</tr>
+	<tr>
+		
+		<td align="center">项目描述：</td>
+		<td class="tdContent">{{item.describe}}</td>
+	</tr>
+	<tr>
+		
+		<td align="center">项目职责：</td>
+		<td class="tdContent">{{item.duty}}</td>
+	</tr>
+	<tr>
+		
+		<td align="center">应用技术：</td>
+		<td class="tdContent">
+			<ul>
+				<li ng-repeat='li in item.technology'>{{li}}</li>
+			</ul>
+		</td>
+	</tr>
+	
+</table>

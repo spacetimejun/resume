@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>王国俊简历</title>
+		<link href="css/index.css" type="text/css" rel="stylesheet"/>
+		<script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/angular-route.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body ng-app="myApp" ng-controller='controller'>
+		<div class="sky">
+			<div class="clouds_one"></div>
+			<div class="clouds_two"></div>
+			<div class="clouds_three"></div>
+		</div>
+		<div class="sky" id="sky2">
+			<div class="clouds_one"></div>
+			<div class="clouds_two"></div>
+			<div class="clouds_three"></div>
+		</div>
+		<div class="sky" id="sky3">
+			<div class="clouds_one"></div>
+			<div class="clouds_two"></div>
+			<div class="clouds_three"></div>
+		</div>
+		<div>
+			<h1><b>王国俊</b> 简历</h1>
+		</div>
+		
+		<div class="left">
+			<ul class="fristUl">
+				<li ad='0' ng-click="change(this);"><a href="#/one">个人信息</a></li>
+				<li ad='1' ng-click="change(this);"><a href="#/two">求职意向</a></li>
+				<li ad='2' ng-click="change(this);"><a href="#/three">专业技能</a></li>
+				<li ad='3' ng-click="change(this);"><a href="#/four">项目经验</a></li>
+				<li ad='4' ng-click="change(this);"><a href="#/five">工作经验</a></li>
+				<li ad='5' ng-click="change(this);"><a href="#/six">教育背景</a></li>
+				<li ad='6' ng-click="change(this);"><a href="#/seven">自我评价</a></li>
+				<li ad='7' ng-click="change(this);" style="position: relative;" class="li2">
+					<a>demo</a>
+					<ul class="secondUl">
+						<li><a href="#/eight">3d立方体组合</a></li>
+						<li><a href="#/night">3d六面体展开</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="right">
+			<div ng-view></div>
+		</div>
+		
+	</body>
+</html>

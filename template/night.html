@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				margin: 100px auto;
+				position: relative;
+				width: 400px;
+				height: 400px;
+				text-align: center;
+				line-height: 200px;
+				transform-style: preserve-3d;
+				border-radius: 100px;
+				transform:rotateX(-30deg) rotateY(-30deg);
+				animation: change 5s linear 6s infinite;
+				
+			}
+			@keyframes change{
+				from{transform:rotateX(-30deg) rotateY(-30deg);}
+				to{transform:rotateX(-390deg) rotateY(-390deg);}
+			}
+			#front,#back,#left,#right,#top,#bottom{
+				position: absolute;
+				width: 200px;
+				height: 200px;
+				left: 0;
+				top: 0;
+				
+				margin: 100px;
+			}
+			#front{
+				background: palegreen;
+				transform: translateZ(-1000px);
+				animation: go1 1s forwards;
+			}
+			@keyframes go1{
+				from{transform: translateZ(-1000px);opacity: 0;}
+				to{transform: translateZ(100px);opacity: 1;}
+			}
+			
+			#back{
+				background: plum;
+				transform: rotateX(0deg) translateZ(-1000px);
+				animation: go2 1s linear 1s forwards ;
+			}
+			@keyframes go2{
+				from{transform: rotateX(0deg) translateZ(-1000px);opacity: 0;}
+				to{transform: rotateX(0deg) translateZ(-100px);opacity: 1;}
+			}
+			
+			#left{
+				background: skyblue;
+				transform: rotateY(-90deg) translateZ(-1000px);
+				animation: go3 1s linear 2s forwards ;
+			}
+			@keyframes go3{
+				from{transform: rotateY(0deg) translateZ(-1000px);opacity: 0;}
+				to{transform: rotateY(-90deg) translateZ(100px);opacity: 1;}
+			}
+			
+			#right{
+				background: darkgrey;
+				transform: rotateY(90deg) translateZ(-1000px);
+				animation: go4 1s linear 3s forwards ;
+			}
+			@keyframes go4{
+				from{transform: rotateY(0deg) translateZ(-1000px);opacity: 0;}
+				to{transform: rotateY(90deg) translateZ(100px);opacity: 1;}
+			}
+			
+			#top{
+				background: gold;
+				transform: rotateX(90deg) translateZ(-1000px);
+				animation: go5 1s linear 4s forwards ;
+			}
+			@keyframes go5{
+				from{transform: rotateX(0deg) translateZ(-1000px);opacity: 0;}
+				to{transform: rotateX(90deg) translateZ(100px);opacity: 1;}
+			}
+			
+			#bottom{
+				background: orangered;
+				transform: rotateX(0deg) translateZ(-1000px);
+				animation: go6 1s linear 5s forwards ;
+			}
+			@keyframes go6{
+				from{transform: rotateX(0deg) translateZ(-1000px);opacity: 0;}
+				to{transform: rotateX(90deg) translateZ(-100px);opacity: 1;}
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		<div id="box">
+			
+			<div id="front">
+				front
+			</div>
+			<div id="back">
+				back
+			</div>
+			<div id="left">
+				left
+			</div>
+			<div id="right">
+				right
+			</div>
+			<div id="top">
+				top
+			</div>
+			<div id="bottom">
+				bottom
+			</div>
+		</div>
+	</body>
+</html>
